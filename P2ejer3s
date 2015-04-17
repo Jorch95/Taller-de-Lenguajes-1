@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void cambiarletras(char *, char, char);
+int main()
+{
+    char a,b;
+    printf("Cambiar frase\n");
+    char palabra[]={"Franche es mas insoportable que una mina y ciego\n"};
+    printf("La frase para cambiar letras es:\n %s ", palabra);
+    printf("Ahora ingrese una letra:\n");
+    scanf("%c", &a); fflush(stdin);
+    printf("Ahora ingrese otra:\n");
+    scanf("%c", &b);
+    cambiarletras(palabra, a,b);
+    printf("La frase nueva queda: \n %s", palabra);
+    fflush(stdin);
+
+
+    return 0;
+}
+
+void cambiarletras (char *p, char a,char b){
+    int i ;
+    for (i=0; *p != '\0'; i++){
+        if (*p==a)
+            *p=b;
+        p++;
+    }
+
+}
