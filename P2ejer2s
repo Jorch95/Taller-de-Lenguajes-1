@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Cantidad de palabras terminadas en 'o' \n");
+    char palabra[20]; int cant=0; int i;
+    printf("Ingrese una palabra: \n");
+    scanf("%s", palabra);
+    while (strcmp(palabra,"XXX")){
+        for (i=0; palabra[i] != '\0'; i++){
+            if ((palabra[i]== 'o') && (palabra[++i]=='\0'))
+                cant+=1;
+            }
+        printf("Se lee una palabra nueva:");
+        scanf("%s", palabra);
+        printf("\n");
+        }
+    printf("La cantidad de palabras terminadas en 'o' son: %d", cant);
+
+    return 0;
+}
